@@ -6,13 +6,21 @@ function getDataFile() {
 
             data = JSON.parse(data)
 
+            visibleColumnNames = Object.assign(data.visible)
+            console.log(visibleColumnNames)
+
             columnNames = Object.keys(data.data[0]);
             for (var i in columnNames) {
                 columns.push({
                     data: columnNames[i],
-                    title: columnNames[i]
+                    title: columnNames[i],
+                    visible: visibleColumnNames.includes(columnNames[i])
+
                 });
             }
+            // visible: (columnNames[i] == 'name' ? true : false)
+            //table.columns( [1,2] ).visible( false );
+
             table = $('#example').DataTable({
                 data: data.data,
                 columns: columns
