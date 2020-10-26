@@ -14,6 +14,10 @@ def data():
             {
                 "name": "Tiger Nixon",
                 "position": "System Architect"
+            },
+            {
+                "name": "Bob",
+                "position": "foo"
             }
         ]
     }
