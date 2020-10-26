@@ -19,7 +19,8 @@ def data():
                 "name": "Bob",
                 "position": "foo"
             }
-        ]
+        ],
+        "visible": [ "name", "office" ]
     }
     # a dict should be ok, recent versions of flask will call jsonify under the hood. 
     #return jsonify(out)
